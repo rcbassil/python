@@ -25,3 +25,6 @@ test1()
 test2()
 test3()
 test4()
+
+for var in list(range(5)):
+   print (var)
