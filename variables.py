@@ -21,6 +21,7 @@ print (mystr[2:])      # Prints string starting from 3rd character
 print (mystr * 2)      # Prints string two times
 print (mystr + "TEST") # Prints concatenated string
 print (mystr[-1])      # Prints last character
+print (mystr[-4:-1])
 
 mylist = [ 'abcd', 786 , 2.23, 'john', 70.2, 786, 'abcd' ]
 tinylist = [123, 'john']
@@ -35,6 +36,10 @@ print (tinylist * 2)  # Prints list two times
 print (mylist + tinylist) # Prints concatenated lists
 print (mylist[-1])      # Prints last element
 
+
+mytuple = (4,)
+
+print(mytuple)
 
 mytuple = ( 'abcd', 786 , 2.23, 'john', 70.2  )
 tinytuple = (123, 'john')
@@ -60,9 +65,11 @@ tinydict = {'name': 'john','code':6734, 'dept': 'sales'}
 
 print (mydict['one'])       # Prints value for 'one' key
 print (mydict[2])           # Prints value for 2 key
+print (mydict)
 print (tinydict)          # Prints complete dictionary
 print (tinydict.keys())   # Prints all the keys
 print (tinydict.values()) # Prints all the values
+print (tinydict.items())
 
 
 # Set in python is defined as the unordered collection of unique items having different data types inside a curly bracket {}
@@ -73,9 +80,14 @@ print (set(mylist))
 
 tup = ((11, "eleven"), (21, "mike"), (19, "dustin"), (46, "caleb"))
 mylist2 = [[11, "eleven"], [21, "mike"], [19, "dustin"], [46, "caleb"]]
+mylist3 = [(11, "eleven"), (21, "mike"), (19, "dustin"), (46, "caleb")]
 
 print (dict(tup))
 print (dict(mylist2))
+print (dict(mylist3))
+
+for x,y in mylist3:
+   print(x,y)
 
 # here, the first element of the tuple becomes a value, and the second element of a tuple becomes the key to the dictionary
 
@@ -115,6 +127,8 @@ print(tup3)
 set2 = {1,1,1}
 print(set2)
 print(set(set2))
+print(list(set2))
+print(len(set2))
 
 
 
@@ -152,6 +166,8 @@ for fruit in fruits:        # traversal of List sequence
 fruits = ['banana', 'apple',  'mango']
 for index in range(len(fruits)):
    print ('Current fruit :', fruits[index])
+
+# iterator
 
 myit = iter(fruits)
 
@@ -226,3 +242,60 @@ for i in range(10):
    print(i)
 
 print(len("abcs"))
+
+if (4 in alist1) and (4 in alist2):
+   print("Found number in both lists!")
+
+if (8 in alist1) or (8 in alist2):
+   print("Found number in one of the lists!")
+
+if 9 not in alist1:
+   print("Number not found")
+
+
+str = "this is string example....wow!!!"
+sub = 'i'
+print ("str.count('i') : ", str.count(sub))
+sub = 'exam'
+print ("str.count('exam', 10, 40) : ", str.count(sub,10,40))
+
+str1 = "this is string example....wow!!!"
+str2 = "exam";
+
+print (str1.find(str2)) # find returns the index
+print (str1.find(str2, 10))
+print (str1.find(str2, 40)) #returns -1 if not found
+
+str = "this is string example....wow!!!"
+print (str.split( ))
+print (str.split('i',1))
+print (str.split('w'))
+
+
+
+
+
+str = "aedeqd;adfaf;adfad; adfaadf"
+print(str.split(";"))
+print(str.strip())
+print(str.replace(" ",""))
+print(str.replace(" ","").split(";"))
+
+
+list1 = ['physics', 'chemistry', 1997, 2000]
+print (list1)
+
+del list1[2]
+print ("After deleting value at index 2 : ", list1)
+
+list1.remove('physics')
+print(list1)
+
+str = "Hello World"
+
+list2 = list(str)
+print ("List elements : ", list2)
+
+list3 = str.split()
+print ("List elements : ", list3)
+

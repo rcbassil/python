@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
+from collections import Counter
+
+
 dict1 = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}
 print ("dict['Name']: ", dict1['Name'])
 print ("dict['Age']: ", dict1['Age'])
@@ -17,6 +20,7 @@ del dict3['Name'] # remove entry with key 'Name'
 
 print(dict3)
 
+# keys must be immutable such as strings, numbers and tuples.
 
 dict4 = {('Name'): ('Zara','Aba'), 'Age': 7}
 print ("dict4['Name']: ", dict4['Name'])
@@ -55,14 +59,11 @@ print(myl)
 a = [1,2,3,2,1,5,6,5,5,5]
 
 seen = set()
-uniq = []
 for x in a:
     if x not in seen:
-        uniq.append(x)
         seen.add(x)
 
 print(seen)
-print(uniq)
 
 seen = set()
 dupes = []
@@ -77,16 +78,20 @@ print(seen)
 print(list(set(dupes)))
 
 
+# Count how many times each item appears
+
 mydict = {}
 
 for i in a:
-    print(i)
+    #print(i)
     if i in mydict.keys():
         mydict[i] =  mydict[i] + 1
     else:
         mydict[i] = 1
 
 print(mydict)
+
+# Duplicates and Uniques
 
 mydup = []
 myuniq = []
@@ -102,6 +107,14 @@ print(mydup)
 print(myuniq)
 
 
+# Using Counter
+
+myc = Counter(a)
+print(myc)
+most_common = myc.most_common()
+print(most_common)
+most_common.reverse()
+print(most_common)
 
 testlist = [1,3,4,5,1,2,6,8]
 

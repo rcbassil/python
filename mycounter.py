@@ -30,6 +30,10 @@ for fruit in sales:
     print(fruit, sales[fruit])
 
 
+for fruit, num in sales.items():
+    print(fruit, num)
+
+
 print(sales.keys())
 print(sales.most_common())
 print(sales.most_common(1)) # most common

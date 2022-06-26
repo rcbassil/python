@@ -7,6 +7,7 @@ def count_letters(filename):
             line_letters = [
                 char for char in line.lower() if char.isalpha()
             ]
+            print(line_letters)
             letter_counter.update(Counter(line_letters))
     return letter_counter
 

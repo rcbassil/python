@@ -84,3 +84,16 @@ print(numbers)
 numbers.extendleft([-1, -2, -3, -4, -5])
 
 print(numbers)
+
+
+#########
+
+myordinals = deque(["a", "b", "c","d","e","f","g"])
+print(myordinals)
+
+n = 0
+while n < len(myordinals):
+    myordinals.rotate()
+    print(myordinals)
+    n = n+1
+    print(n)
