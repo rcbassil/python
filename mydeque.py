@@ -18,6 +18,7 @@ myd3 = deque(numbers.items())
 print(myd3)
 
 
+
 numbers = deque([1, 2, 3, 4])
 print(numbers)
 print(numbers.popleft())

@@ -91,6 +91,9 @@ for i in a:
 
 print(mydict)
 
+if 2 in mydict:
+    print("Test")
+
 # Duplicates and Uniques
 
 mydup = []
@@ -101,6 +104,7 @@ for k,v in mydict.items():
         mydup.append(k)
     elif v == 1:
         myuniq.append(k)
+
 
 
 print(mydup)
