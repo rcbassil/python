@@ -3,7 +3,8 @@ def my_sort(line):
                     'PREMIUMECONOMY': 2,
                     'BUSINESS': 3,
                     'FIRSTCLASS': 4}
-    line_fields = line.strip().split() # split by space
+    line_fields = line.replace(" ","").strip().split(";") # split
+    print(line_fields)
     cabin_class = line_fields[-1] # last field
     return flight_class[cabin_class]
   
@@ -13,7 +14,7 @@ def my_sort(line):
 fp = open('Flights.txt')
 contents = fp.readlines()
 
-#print(contents)
+print(contents)
   
 # sorting based on categorical variable cabin class
 contents.sort(key=my_sort)

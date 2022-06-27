@@ -118,3 +118,29 @@ for product, income in incomes:
 for product, income in dd.items():
     print(f'Total income for {product}: ${income:,.2f}')
 
+
+########
+
+mycontent = []
+
+with open("./Flights.txt") as file:
+    for line in file:
+        print(tuple(line.strip().split(";")))
+        mycontent.append(tuple(line.replace(" ","").strip().split(";")))
+
+print(mycontent)
+
+for i in mycontent:
+    print(i[-1])
+
+group_class = defaultdict(list)
+
+for numreg, name, ticket, myclass in mycontent:
+    group_class[myclass].append({"name": name, "ticket": ticket, "numreg":numreg })
+
+print(group_class)
+
+print(group_class["ECONOMY"])
+
+for i in group_class:
+    print(i," -> ",group_class[i])

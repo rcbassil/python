@@ -1,4 +1,5 @@
 from collections import Counter
+import math
 
 
 multiset = Counter({1, 1, 2, 3, 3, 3, 4, 4})
@@ -41,4 +42,26 @@ new_pets = Counter({"dogs": 4, "cats": 1})
 inventory.update(new_pets)
 
 print(inventory)
-    
+
+
+#######
+
+prime_factors = Counter()
+
+print(prime_factors)
+
+# Prime factors of 1836
+
+prime_factors.update({2: 2, 3: 3, 17: 1})
+
+print(prime_factors)
+
+product = 1
+
+for factor in prime_factors.elements():
+    product *= factor
+
+print(product)
+
+
+print(math.prod(prime_factors.elements()))

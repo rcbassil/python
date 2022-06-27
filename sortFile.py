@@ -1,5 +1,8 @@
+### Sort File by Column
+
 def my_sort(line):
     line_fields = line.strip().split(',')
+    print(line_fields)
     amount = float(line_fields[2])
     return amount
   
@@ -8,6 +11,8 @@ def my_sort(line):
 # and getting contents into a list
 fp = open('MallSalesData.csv')
 contents = fp.readlines()
+
+print(contents)
   
 # sorting using our custom logic
 contents.sort(key=my_sort, reverse=True)
