@@ -28,6 +28,12 @@ numbers.dequeue()
 
 print(numbers)
 
+print(numbers.__contains__(1))
+
+print(numbers.__contains__(3))
+
+print(list(numbers.__reversed__()))
+
 four_numbers = deque([0, 1, 2, 3, 4], maxlen=4) # Discard 0
 
 print(four_numbers)

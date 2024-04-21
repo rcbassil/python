@@ -9,10 +9,15 @@ l.sort()
 
 print (l)
 
+print(l[-1:])
+print(l[-2:])
 
 print (l[::-1]) # Same as reverse
 
 print (l[:-4:-1])
+
+print (l[:-2:-1])
+
 
 l.reverse()
 

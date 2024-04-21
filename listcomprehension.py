@@ -58,3 +58,22 @@ def primes(n):
     
 for i in range(1,50):
     print(i, primes(i))
+
+chars = [ char for char in 'TutorialsPoint' if char not in 'aeiou']
+print (chars)
+
+squares = [x*x for x in range(1,11)]
+print (squares)
+
+# Combination
+
+list1=[1,2,3]
+list2=[4,5,6]
+CombLst=[(x,y) for x in list1 for y in list2]
+print (CombLst)
+
+# Even numbers
+
+list1=[x for x in range(1,21) if x%2==0]
+print (list1)
+

@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
+
+print ("hello world")
+
 counter = 100          # An integer assignment
 miles   = 1000.0       # A floating point
 name    = "John"       # A string
@@ -11,6 +14,12 @@ print (name)
 a, b, c = 1, 2, "john"
 
 print (a,b,c)
+
+print (type(a))
+print (type(c))
+
+print (str(a))
+print (int("2"))
 
 mystr = 'Hello World!'
 
@@ -98,7 +107,8 @@ print(dct)
 
 def conversion(tup, dict):
     for x, y in tup:
-        dict.setdefault(x, []).append(y)
+        #dict.setdefault(x, []).append(y)
+        dict[x] = [y]
     return dict
 
 
@@ -130,7 +140,16 @@ print(set(set2))
 print(list(set2))
 print(len(set2))
 
+data_list = [{'name': 'Alice'}, {'age': 25}, {'city': 'London'}]
+data_dict = dict((key, value) for d in data_list for key, value in d.items())
+print (data_list)
+print('The dictionary object obtained is:',data_dict)
 
+keys = ["name", "age", "city"]
+values = ["Bob", 28, "Paris"]
+print (list(zip(keys, values)))
+person_dict = dict(zip(keys, values))
+print('The dictionary object obtained is:',person_dict)
 
 myvar = 100
 if ( myvar  == 100 ) : print ("Value of expression is 100")
@@ -253,11 +272,11 @@ if 9 not in alist1:
    print("Number not found")
 
 
-str = "this is string example....wow!!!"
+str5 = "this is string example....wow!!!"
 sub = 'i'
-print ("str.count('i') : ", str.count(sub))
+print ("str.count('i') : ", str5.count(sub))
 sub = 'exam'
-print ("str.count('exam', 10, 40) : ", str.count(sub,10,40))
+print ("str.count('exam', 10, 40) : ", str5.count(sub,10,40))
 
 str1 = "this is string example....wow!!!"
 str2 = "exam";
@@ -266,20 +285,20 @@ print (str1.find(str2)) # find returns the index
 print (str1.find(str2, 10))
 print (str1.find(str2, 40)) #returns -1 if not found
 
-str = "this is string example....wow!!!"
-print (str.split( ))
-print (str.split('i',1))
-print (str.split('w'))
+str3 = "this is string example....wow!!!"
+print (str3.split( ))
+print (str3.split('i',1))
+print (str3.split('w'))
 
 
 
 
 
-str = "aedeqd;adfaf;adfad; adfaadf"
-print(str.split(";"))
-print(str.strip())
-print(str.replace(" ",""))
-print(str.replace(" ","").split(";"))
+str4 = "aedeqd;adfaf;adfad; adfaadf"
+print(str4.split(";"))
+print(str4.strip())
+print(str4.replace(" ",""))
+print(str4.replace(" ","").split(";"))
 
 
 list1 = ['physics', 'chemistry', 1997, 2000]
@@ -291,11 +310,67 @@ print ("After deleting value at index 2 : ", list1)
 list1.remove('physics')
 print(list1)
 
-str = "Hello World"
+str1 = "Hello World"
 
-list2 = list(str)
+list2 = list(str1)
 print ("List elements : ", list2)
 
-list3 = str.split()
+list3 = str1.split()
 print ("List elements : ", list3)
+
+
+
+numbers = {10:"Ten", 20:"Twenty", 30:"Thirty",40:"Forty"}
+for x,y in numbers.items():
+   print (x,":", y)
+
+numbers = {10:"Ten", 20:"Twenty", 30:"Thirty",40:"Forty"}
+for x in numbers.keys():
+   print (x, ":", numbers[x])
+
+s1="WORD"
+print ("original string:", s1)
+l1=list(s1)
+
+l1.insert(3,"L")
+
+print (l1)
+
+s1=''.join(l1)
+print ("Modified string:", s1)
+
+x = "ABCF"
+
+print(x)
+
+print(x.lower())
+
+print(x)
+
+
+digits = [ str(x) for x in range(10) ]
+mystr = 'He12llo, Py00th55on!'
+chars = []
+for x in mystr:
+   if x not in digits:
+      chars.append(x)
+newstr = ''.join(chars)
+print (newstr)
+
+list1 = ["a", "b", "c", "d"]
+
+print ("Original list: ", list1)
+
+list2 = ['Y', 'Z']
+list1[1:3] = list2
+
+print ("List after changing with sublist: ", list1)
+
+
+
+
+lst = [25, 12, 10, -21, 10, 100]
+for num in lst:
+   print (num, end = ' ')
+
 

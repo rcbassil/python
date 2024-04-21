@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 lower = 1
 upper = 100
 
@@ -11,3 +13,19 @@ for num in range(lower, upper + 1):
                break
        else:
            print(num)
+
+
+# or
+
+i = 2
+while(i < 100):
+   j = 2
+   while(j <= (i/j)):
+      if not(i%j): break
+      j = j + 1
+   if (j > i/j) : print (i), " is prime"
+   i = i + 1
+
+print ("Good bye!")
+
+

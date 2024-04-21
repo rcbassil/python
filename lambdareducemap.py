@@ -11,7 +11,7 @@ a = [1, 2, 3, 4]
 b = [17, 12, 11, 10]
 c = [-1, -4, 5, 9] 
 
-list(map(lambda x, y, z : x+y+z, a, b, c))
+print(list(map(lambda x, y, z : x+y+z, a, b, c)))
 
 fibonacci = [0,1,1,2,3,5,8,13,21,34,55]
 odd_numbers = list(filter(lambda x: x % 2 !=0 , fibonacci))
