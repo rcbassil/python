@@ -36,17 +36,32 @@ class UnorderedList:
         return found
 
     def remove(self,item):
+        removed = False
         current = self.head
         previous = None
         found = False
-        while not found:
+        while not found and current != None :
             if current.getData() == item:
                 found = True
             else:
                 previous = current
                 current = current.getNext()
 
-        if previous == None:
+        if previous == None and current != None:
             self.head = current.getNext()
-        else:
+            removed = True
+        elif previous != None and current != None:
             previous.setNext(current.getNext())
+            removed = True
+
+        return removed
+
+    def __str__(self):
+        mystr = ""
+        current = self.head
+        while current != None:
+            mystr = mystr + " " + str(current.getData())
+            current = current.getNext()
+        
+        return mystr
+            

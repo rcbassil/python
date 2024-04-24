@@ -6,6 +6,7 @@ import sys
 from Fraction import Fraction
 from Queue import Queue
 from Stack import Stack
+from UnorderedList import UnorderedList
 
 myvar = 0
 
@@ -194,3 +195,22 @@ myl.append(mystack.pop())
 print(myl)
 
 
+myUnorderedList = UnorderedList()
+print(myUnorderedList.isEmpty())
+
+myUnorderedList.add(2)
+myUnorderedList.add(8)
+myUnorderedList.add(12)
+myUnorderedList.add(3)
+print(myUnorderedList.isEmpty())
+print(myUnorderedList)
+print(myUnorderedList.size())
+print(myUnorderedList.search(8))
+print(myUnorderedList.search(18))
+print(myUnorderedList)
+print(myUnorderedList.remove(2))
+print(myUnorderedList.remove(8))
+print(myUnorderedList.remove(12))
+print(myUnorderedList.remove(3))
+print(myUnorderedList.isEmpty())
+print(myUnorderedList.remove(3))
