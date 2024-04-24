@@ -17,4 +17,4 @@ def divideBy2(decNumber):
 
     return binString
 
-print(divideBy2(42))
+print(divideBy2(4))

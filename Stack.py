@@ -17,3 +17,7 @@ class Stack:
 
      def size(self):
          return len(self.items)
+     
+     def __str__(self):
+         mapped = map(str, self.items)
+         return " ".join(mapped)
