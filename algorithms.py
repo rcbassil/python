@@ -7,6 +7,7 @@ from Fraction import Fraction
 from Queue import Queue
 from Stack import Stack
 from UnorderedList import UnorderedList
+from HashMap import HashTable
 
 myvar = 0
 
@@ -267,6 +268,29 @@ print(findElement(6,mylist))
 print(findElement(2,mylist))
 print(findElement(8,mylist))
 print(findElement(1,mylist))
+
+
+H=HashTable(11)
+H[54]="cat"
+H[26]="dog"
+H[93]="lion"
+H[17]="tiger"
+H[77]="bird"
+H[31]="cow"
+H[44]="goat"
+H[55]="pig"
+H[20]="chicken"
+
+print(H.slots)
+print(H.data)
+
+
+H[20]='duck'
+print(H.data)
+print(H[26])
+
+
+
 
 
 

@@ -5,6 +5,8 @@ def binarySearchRecursive(alist, item):
         return False
     else:
         midpoint = len(alist)//2
+        #print(midpoint)
+        #print(alist[midpoint])
         if alist[midpoint] == item:
             return True
         else:
@@ -14,6 +16,6 @@ def binarySearchRecursive(alist, item):
                 return binarySearchRecursive(alist[midpoint+1:],item)
 	
 
-testlist = [0, 1, 2, 8, 13, 17, 19, 32, 42]
-print(binarySearchRecursive(testlist, 3))
-print(binarySearchRecursive(testlist, 13))
+testlist = [3, 5, 6, 8, 11, 12, 14, 15, 17, 18]
+print(binarySearchRecursive(testlist, 8))
+print(binarySearchRecursive(testlist, 16))
