@@ -214,3 +214,59 @@ print(myUnorderedList.remove(12))
 print(myUnorderedList.remove(3))
 print(myUnorderedList.isEmpty())
 print(myUnorderedList.remove(3))
+
+
+def listsum(numList):
+   if len(numList) == 1:
+        return numList[0]
+   else:
+        return numList[0] + listsum(numList[1:])
+
+print(listsum([1,3,5,7,9]))
+
+def factorial(num):
+    if num <= 1:
+        return 1
+    else:
+        return num * factorial(num-1)
+    
+
+print(factorial(4))
+
+
+strStack = Stack()
+
+def toStr(n,base):
+   response = ""
+   convertString = "0123456789ABCDEF"
+   while n > 0:
+       strStack.push(convertString[n%base])
+       n = n//base
+
+   while not strStack.isEmpty():
+       response = response + str(strStack.pop())
+
+   return response
+       
+
+print(toStr(10,16))
+
+mylist = [1, 4, 5, 6 ,7, 2]
+
+def findElement(element,listOfElements):
+    found = False
+    for i in listOfElements:
+        if i == element:
+            found = True
+            break
+
+    return found
+
+
+print(findElement(6,mylist))
+print(findElement(2,mylist))
+print(findElement(8,mylist))
+print(findElement(1,mylist))
+
+
+
