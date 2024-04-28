@@ -9,6 +9,7 @@ from Stack import Stack
 from UnorderedList import UnorderedList
 from HashMap import HashTable
 from BinaryHeap import BinHeap
+from BinarySearchTree import BinarySearchTree
 
 myvar = 0
 
@@ -313,3 +314,18 @@ print(myBinaryHeap.delMin())
 print(myBinaryHeap.delMin())
 print(myBinaryHeap.delMin())
 print(myBinaryHeap.delMin())
+
+# binary search tree
+
+myBinSearchTree = BinarySearchTree()
+print(myBinSearchTree)
+
+myBinSearchTree[3]="red"
+myBinSearchTree[4]="blue"
+myBinSearchTree[6]="yellow"
+myBinSearchTree[2]="at"
+
+print(myBinSearchTree[6])
+print(myBinSearchTree[2])
+
+
