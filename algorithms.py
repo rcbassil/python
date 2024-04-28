@@ -8,6 +8,7 @@ from Queue import Queue
 from Stack import Stack
 from UnorderedList import UnorderedList
 from HashMap import HashTable
+from BinaryHeap import BinHeap
 
 myvar = 0
 
@@ -300,5 +301,15 @@ print('root = ', my_tree[0])
 print('right subtree = ', my_tree[2])
 
 
+# binary heap
 
-
+myBinaryHeap = BinHeap()
+myBinaryHeap.buildHeap([5,3,9,8,12,14,4])
+print(myBinaryHeap.delMin())
+print(myBinaryHeap.delMin())
+print(myBinaryHeap.delMin())
+print(myBinaryHeap.delMin())
+print(myBinaryHeap.delMin())
+print(myBinaryHeap.delMin())
+print(myBinaryHeap.delMin())
+print(myBinaryHeap.delMin())

@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+# O(log n)
+
 
 def binarySearch(alist, item):
     first = 0
