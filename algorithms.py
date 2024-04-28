@@ -10,6 +10,8 @@ from UnorderedList import UnorderedList
 from HashMap import HashTable
 from BinaryHeap import BinHeap
 from BinarySearchTree import BinarySearchTree
+from Graph import Graph
+from Vertex import Vertex
 
 myvar = 0
 
@@ -328,4 +330,37 @@ myBinSearchTree[2]="at"
 print(myBinSearchTree[6])
 print(myBinSearchTree[2])
 
+# graph
+
+g = Graph()
+
+for i in range(6):
+    g.add_vertex(Vertex(i))
+
+print(g.vertices)
+
+for v in g:
+    print(v)
+
+g.add_edge(0, 1, 5)
+g.add_edge(0, 5, 2)
+g.add_edge(1, 2, 4)
+g.add_edge(2, 3, 9)
+g.add_edge(3, 4, 7)
+g.add_edge(3, 5, 3)
+g.add_edge(4, 0, 1)
+g.add_edge(5, 4, 8)
+g.add_edge(5, 2, 1)
+
+for v in g:
+    print(v)
+
+
+print(g.get_vertices())
+print(g.get_vertex(0))
+
+for v in g:
+    print(v)
+    for w in v.get_connections():
+        print("({} -> {}, weight {})".format(v.key, w.key, v.get_weight(w)))
 
