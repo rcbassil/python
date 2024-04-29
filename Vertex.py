@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 
+import sys
+
 class Vertex:
     def __init__(self, key):
         self.key = key
         self.neighbors = {}
-        self.dist = 0
+        self.dist = sys.maxsize
         self.pred = None
         self.color = 'white'
 
@@ -18,10 +20,10 @@ class Vertex:
             [x.key for x in self.neighbors]
         )
 
-    def get_connections(self):
+    def getConnections(self):
         return self.neighbors.keys()
 
-    def get_weight(self, neighbor):
+    def getWeight(self, neighbor):
         return self.neighbors[neighbor]
     
     def getPred(self):

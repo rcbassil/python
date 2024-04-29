@@ -33,7 +33,7 @@ def bfs(start):
   vertQueue.enqueue(start)
   while (vertQueue.size() > 0):
     currentVert = vertQueue.dequeue()
-    for nbr in currentVert.get_connections():
+    for nbr in currentVert.getConnections():
       if (nbr.getColor() == 'white'):
         nbr.setColor('gray')
         nbr.setDistance(currentVert.getDistance() + 1)
@@ -58,7 +58,7 @@ print(myGraph)
 print(myGraph.get_vertices())
 
 #for v in myGraph:
-#    for w in v.get_connections():
+#    for w in v.getConnections():
 #        print("({} -> {})".format(v.key, w.key))
 
 print(myGraph.get_vertex('AAHS'))
@@ -66,8 +66,8 @@ print(myGraph.get_vertex('AAHS'))
 bfs(myGraph.get_vertex('AAHS'))
 
 for v in myGraph:
-    for w in v.get_connections():
-        print("({} -> {}, weight {}, dist {} , color {})".format(v.key, w.key, v.get_weight(w), v.getDistance(), v.getColor()))
+    for w in v.getConnections():
+        print("({} -> {}, weight {}, dist {} , color {})".format(v.key, w.key, v.getWeight(w), v.getDistance(), v.getColor()))
 
 
 traverse(myGraph.get_vertex('ACNE'))

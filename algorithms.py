@@ -361,6 +361,6 @@ print(g.get_vertex(0))
 
 for v in g:
     print(v)
-    for w in v.get_connections():
-        print("({} -> {}, weight {})".format(v.key, w.key, v.get_weight(w)))
+    for w in v.getConnections():
+        print("({} -> {}, weight {})".format(v.key, w.key, v.getWeight(w)))
 
