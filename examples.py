@@ -424,3 +424,11 @@ inventory = inventory - Counter(dogs=2, cats=3, pythons=1)
 print(inventory)
 
 
+
+sales = Counter(banana=15, tomato=4, apple=39, orange=30)
+
+print(sales.most_common(1))
+print(sales.most_common())
+print(sales.most_common(2))
+
+
