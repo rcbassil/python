@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-from collections import deque, namedtuple
+from collections import Counter, OrderedDict, deque, namedtuple
 import csv
 from functools import reduce
 import math
@@ -373,5 +373,54 @@ point = Point(2, 4)
 print(point)
 print(point.x)
 print(point.y)
+
+
+
+# Ordered Dict
+
+life_stages = OrderedDict()
+life_stages["childhood"] = "0-9"
+life_stages["adolescence"] = "9-18"
+life_stages["adulthood"] = "18-65"
+life_stages["old"] = "+65"
+
+for stage, years in life_stages.items():
+    print(stage, "->", years)
+
+# Counter
+
+print(Counter("mississippi"))
+
+print(Counter([1, 1, 2, 3, 3, 3, 4]))
+
+letters = Counter("mississippi")
+
+print(letters)
+
+letters.update({"a": 2})
+
+letters.update(m=3, i=4) # it adds the counts 
+
+print(letters)
+
+print(letters["b"]) # missing key returns 0
+
+for letter, count in letters.items():
+    print(letter, count)
+
+
+inventory = Counter(dogs=23, cats=14, pythons=7)
+
+print(inventory)
+
+new_pets = {"dogs": 4, "cats": 1}
+
+inventory.update(new_pets)
+
+print(inventory)
+
+inventory = inventory - Counter(dogs=2, cats=3, pythons=1)
+
+print(inventory)
 
 
